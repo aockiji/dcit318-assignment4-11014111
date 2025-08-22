@@ -34,8 +34,6 @@ public class MainForm : Form
 
 	private Button recSaleBtn;
 
-	private Button button5;
-
 	public MainForm()
 	{
 		InitializeComponent();
@@ -243,111 +241,139 @@ public class MainForm : Form
 		base.Dispose(disposing);
 	}
 
-	private void InitializeComponent()
-	{
-		this.searchBox = new System.Windows.Forms.TextBox();
-		this.searchBtn = new System.Windows.Forms.Button();
-		this.viewAllBtn = new System.Windows.Forms.Button();
-		this.dataGridViewMeds = new System.Windows.Forms.DataGridView();
-		this.medNameBox = new System.Windows.Forms.TextBox();
-		this.priceBox = new System.Windows.Forms.TextBox();
-		this.categoryBox = new System.Windows.Forms.TextBox();
-		this.quantityBox = new System.Windows.Forms.TextBox();
-		this.addMedBtn = new System.Windows.Forms.Button();
-		this.updateBtn = new System.Windows.Forms.Button();
-		this.recSaleBtn = new System.Windows.Forms.Button();
-		this.button5 = new System.Windows.Forms.Button();
-		((System.ComponentModel.ISupportInitialize)this.dataGridViewMeds).BeginInit();
-		base.SuspendLayout();
-		this.searchBox.Location = new System.Drawing.Point(17, 77);
-		this.searchBox.Name = "searchBox";
-		this.searchBox.Size = new System.Drawing.Size(556, 23);
-		this.searchBox.TabIndex = 0;
-		this.searchBox.TextChanged += new System.EventHandler(searchBox_TextChanged);
-		this.searchBtn.Location = new System.Drawing.Point(579, 77);
-		this.searchBtn.Name = "searchBtn";
-		this.searchBtn.Size = new System.Drawing.Size(95, 24);
-		this.searchBtn.TabIndex = 1;
-		this.searchBtn.Text = "Search";
-		this.searchBtn.UseVisualStyleBackColor = true;
-		this.viewAllBtn.Location = new System.Drawing.Point(680, 76);
-		this.viewAllBtn.Name = "viewAllBtn";
-		this.viewAllBtn.Size = new System.Drawing.Size(108, 23);
-		this.viewAllBtn.TabIndex = 2;
-		this.viewAllBtn.Text = "View All Meds";
-		this.viewAllBtn.UseVisualStyleBackColor = true;
-		this.dataGridViewMeds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-		this.dataGridViewMeds.Location = new System.Drawing.Point(17, 106);
-		this.dataGridViewMeds.Name = "dataGridViewMeds";
-		this.dataGridViewMeds.Size = new System.Drawing.Size(771, 332);
-		this.dataGridViewMeds.TabIndex = 3;
-		this.dataGridViewMeds.SelectionChanged += new System.EventHandler(dataGridViewMeds_SelectionChanged);
-		this.medNameBox.ForeColor = System.Drawing.SystemColors.WindowText;
-		this.medNameBox.Location = new System.Drawing.Point(17, 12);
-		this.medNameBox.Name = "medNameBox";
-		this.medNameBox.Size = new System.Drawing.Size(299, 23);
-		this.medNameBox.TabIndex = 4;
-		this.priceBox.ForeColor = System.Drawing.SystemColors.WindowText;
-		this.priceBox.Location = new System.Drawing.Point(548, 12);
-		this.priceBox.Name = "priceBox";
-		this.priceBox.Size = new System.Drawing.Size(126, 23);
-		this.priceBox.TabIndex = 5;
-		this.categoryBox.ForeColor = System.Drawing.SystemColors.WindowText;
-		this.categoryBox.Location = new System.Drawing.Point(322, 12);
-		this.categoryBox.Name = "categoryBox";
-		this.categoryBox.Size = new System.Drawing.Size(220, 23);
-		this.categoryBox.TabIndex = 6;
-		this.quantityBox.ForeColor = System.Drawing.SystemColors.WindowText;
-		this.quantityBox.Location = new System.Drawing.Point(680, 12);
-		this.quantityBox.Name = "quantityBox";
-		this.quantityBox.Size = new System.Drawing.Size(100, 23);
-		this.quantityBox.TabIndex = 7;
-		this.addMedBtn.Location = new System.Drawing.Point(17, 48);
-		this.addMedBtn.Name = "addMedBtn";
-		this.addMedBtn.Size = new System.Drawing.Size(121, 23);
-		this.addMedBtn.TabIndex = 8;
-		this.addMedBtn.Text = "Add Medicine";
-		this.addMedBtn.UseVisualStyleBackColor = true;
-		this.addMedBtn.Click += new System.EventHandler(addMedBtn_Click);
-		this.updateBtn.Location = new System.Drawing.Point(144, 48);
-		this.updateBtn.Name = "updateBtn";
-		this.updateBtn.Size = new System.Drawing.Size(141, 23);
-		this.updateBtn.TabIndex = 9;
-		this.updateBtn.Text = "Update Medicine Stock";
-		this.updateBtn.UseVisualStyleBackColor = true;
-		this.updateBtn.Click += new System.EventHandler(updateBtn_Click);
-		this.recSaleBtn.Location = new System.Drawing.Point(291, 48);
-		this.recSaleBtn.Name = "recSaleBtn";
-		this.recSaleBtn.Size = new System.Drawing.Size(102, 23);
-		this.recSaleBtn.TabIndex = 10;
-		this.recSaleBtn.Text = "Record Sale";
-		this.recSaleBtn.UseVisualStyleBackColor = true;
-		this.recSaleBtn.Click += new System.EventHandler(recSaleBtn_Click);
-		this.button5.Location = new System.Drawing.Point(498, 48);
-		this.button5.Name = "button5";
-		this.button5.Size = new System.Drawing.Size(75, 23);
-		this.button5.TabIndex = 11;
-		this.button5.Text = "button5";
-		this.button5.UseVisualStyleBackColor = true;
-		base.AutoScaleDimensions = new System.Drawing.SizeF(7f, 15f);
-		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-		base.ClientSize = new System.Drawing.Size(800, 450);
-		base.Controls.Add(this.button5);
-		base.Controls.Add(this.recSaleBtn);
-		base.Controls.Add(this.updateBtn);
-		base.Controls.Add(this.addMedBtn);
-		base.Controls.Add(this.quantityBox);
-		base.Controls.Add(this.categoryBox);
-		base.Controls.Add(this.priceBox);
-		base.Controls.Add(this.medNameBox);
-		base.Controls.Add(this.dataGridViewMeds);
-		base.Controls.Add(this.viewAllBtn);
-		base.Controls.Add(this.searchBtn);
-		base.Controls.Add(this.searchBox);
-		base.Name = "MainForm";
-		this.Text = "Pharmacy Inventory Management";
-		((System.ComponentModel.ISupportInitialize)this.dataGridViewMeds).EndInit();
-		base.ResumeLayout(false);
-		base.PerformLayout();
-	}
+    private void InitializeComponent()
+    {
+        searchBox = new TextBox();
+        searchBtn = new Button();
+        viewAllBtn = new Button();
+        dataGridViewMeds = new DataGridView();
+        medNameBox = new TextBox();
+        priceBox = new TextBox();
+        categoryBox = new TextBox();
+        quantityBox = new TextBox();
+        addMedBtn = new Button();
+        updateBtn = new Button();
+        recSaleBtn = new Button();
+        ((ISupportInitialize)dataGridViewMeds).BeginInit();
+        SuspendLayout();
+        // 
+        // searchBox
+        // 
+        searchBox.Location = new Point(17, 77);
+        searchBox.Name = "searchBox";
+        searchBox.Size = new Size(556, 23);
+        searchBox.TabIndex = 0;
+        searchBox.TextChanged += searchBox_TextChanged;
+        // 
+        // searchBtn
+        // 
+        searchBtn.Location = new Point(579, 77);
+        searchBtn.Name = "searchBtn";
+        searchBtn.Size = new Size(95, 24);
+        searchBtn.TabIndex = 1;
+        searchBtn.Text = "Search";
+        searchBtn.UseVisualStyleBackColor = true;
+        // 
+        // viewAllBtn
+        // 
+        viewAllBtn.Location = new Point(680, 76);
+        viewAllBtn.Name = "viewAllBtn";
+        viewAllBtn.Size = new Size(108, 23);
+        viewAllBtn.TabIndex = 2;
+        viewAllBtn.Text = "View All Meds";
+        viewAllBtn.UseVisualStyleBackColor = true;
+        // 
+        // dataGridViewMeds
+        // 
+        dataGridViewMeds.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridViewMeds.Location = new Point(17, 106);
+        dataGridViewMeds.Name = "dataGridViewMeds";
+        dataGridViewMeds.Size = new Size(771, 332);
+        dataGridViewMeds.TabIndex = 3;
+        dataGridViewMeds.SelectionChanged += dataGridViewMeds_SelectionChanged;
+        // 
+        // medNameBox
+        // 
+        medNameBox.ForeColor = SystemColors.WindowText;
+        medNameBox.Location = new Point(17, 12);
+        medNameBox.Name = "medNameBox";
+        medNameBox.Size = new Size(299, 23);
+        medNameBox.TabIndex = 4;
+        // 
+        // priceBox
+        // 
+        priceBox.ForeColor = SystemColors.WindowText;
+        priceBox.Location = new Point(548, 12);
+        priceBox.Name = "priceBox";
+        priceBox.Size = new Size(126, 23);
+        priceBox.TabIndex = 5;
+        // 
+        // categoryBox
+        // 
+        categoryBox.ForeColor = SystemColors.WindowText;
+        categoryBox.Location = new Point(322, 12);
+        categoryBox.Name = "categoryBox";
+        categoryBox.Size = new Size(220, 23);
+        categoryBox.TabIndex = 6;
+        // 
+        // quantityBox
+        // 
+        quantityBox.ForeColor = SystemColors.WindowText;
+        quantityBox.Location = new Point(680, 12);
+        quantityBox.Name = "quantityBox";
+        quantityBox.Size = new Size(100, 23);
+        quantityBox.TabIndex = 7;
+        // 
+        // addMedBtn
+        // 
+        addMedBtn.Location = new Point(17, 48);
+        addMedBtn.Name = "addMedBtn";
+        addMedBtn.Size = new Size(121, 23);
+        addMedBtn.TabIndex = 8;
+        addMedBtn.Text = "Add Medicine";
+        addMedBtn.UseVisualStyleBackColor = true;
+        addMedBtn.Click += addMedBtn_Click;
+        // 
+        // updateBtn
+        // 
+        updateBtn.Location = new Point(144, 48);
+        updateBtn.Name = "updateBtn";
+        updateBtn.Size = new Size(141, 23);
+        updateBtn.TabIndex = 9;
+        updateBtn.Text = "Update Medicine Stock";
+        updateBtn.UseVisualStyleBackColor = true;
+        updateBtn.Click += updateBtn_Click;
+        // 
+        // recSaleBtn
+        // 
+        recSaleBtn.Location = new Point(291, 48);
+        recSaleBtn.Name = "recSaleBtn";
+        recSaleBtn.Size = new Size(102, 23);
+        recSaleBtn.TabIndex = 10;
+        recSaleBtn.Text = "Record Sale";
+        recSaleBtn.UseVisualStyleBackColor = true;
+        recSaleBtn.Click += recSaleBtn_Click;
+        // 
+        // MainForm
+        // 
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(800, 450);
+        Controls.Add(recSaleBtn);
+        Controls.Add(updateBtn);
+        Controls.Add(addMedBtn);
+        Controls.Add(quantityBox);
+        Controls.Add(categoryBox);
+        Controls.Add(priceBox);
+        Controls.Add(medNameBox);
+        Controls.Add(dataGridViewMeds);
+        Controls.Add(viewAllBtn);
+        Controls.Add(searchBtn);
+        Controls.Add(searchBox);
+        Name = "MainForm";
+        Text = "Pharmacy Inventory Management";
+        ((ISupportInitialize)dataGridViewMeds).EndInit();
+        ResumeLayout(false);
+        PerformLayout();
+    }
 }

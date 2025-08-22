@@ -32,7 +32,14 @@ public class ManageAppointmentsForm : Form
         SqlConnection connection = new SqlConnection(Program.connectionString);
         try
         {
-            string filterQuery = "\r\n                SELECT a.AppointmentID, d.FullName AS Doctor, p.FullName AS Patient, a.AppointmentDate, a.Notes\r\n                FROM Appointments a\r\n                JOIN Doctors d ON a.DoctorID = d.DoctorID\r\n                JOIN Patients p ON a.PatientID = p.PatientID\r\n                WHERE (@PatientName = '' OR p.FullName LIKE '%' + @PatientName + '%')\r\n                ORDER BY a.AppointmentDate";
+            string filterQuery = @"
+                                SELECT a.AppointmentID, d.FullName AS Doctor, p.FullName AS Patient, a.AppointmentDate, a.Notes
+                                FROM Appointments 
+                                JOIN Doctors d ON a.DoctorID = d.DoctorID
+                                JOIN Patients p ON a.PatientID = p.PatientID
+                                WHERE (@PatientName = '' OR p.FullName LIKE '%' + @PatientName + '%')
+                                
+ORDER BY a.AppointmentDate";
             SqlCommand command = new SqlCommand(filterQuery, connection);
             using (connection)
             {
