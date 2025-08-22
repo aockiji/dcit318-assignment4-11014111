@@ -34,7 +34,7 @@ public class ManageAppointmentsForm : Form
         {
             string filterQuery = @"
                                 SELECT a.AppointmentID, d.FullName AS Doctor, p.FullName AS Patient, a.AppointmentDate, a.Notes
-                                FROM Appointments 
+                                FROM Appointments a
                                 JOIN Doctors d ON a.DoctorID = d.DoctorID
                                 JOIN Patients p ON a.PatientID = p.PatientID
                                 WHERE (@PatientName = '' OR p.FullName LIKE '%' + @PatientName + '%')
